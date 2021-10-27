@@ -1,10 +1,17 @@
 body {
   background-image: url("../images/bg-image-css.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  background-attachment: fixed;
   background-size: cover;
   font-family: sans-serif;
   background-color: gray;
   /* color: white; */
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 #container {
   margin: auto;
@@ -43,4 +50,9 @@ h2 {
 .validator {
   width: 8%;
   float: left;
+}
+.title {
+  color: rgb(223, 223, 23);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
 }
