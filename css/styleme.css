@@ -1,0 +1,46 @@
+body {
+  background-image: url("../images/bg-image-css.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  background-color: gray;
+  /* color: white; */
+}
+#container {
+  margin: auto;
+  padding: 10px;
+  /* background-color: rgba(39, 33, 33, 0.479); */
+}
+h1,
+h2 {
+  color: rgb(95, 98, 138);
+}
+#mood {
+  margin-left: 50px;
+  margin-right: 150px;
+}
+#happy {
+  float: left;
+  width: auto;
+}
+#sad {
+  float: right;
+  width: auto;
+}
+#neighbor {
+  clear: both;
+}
+.nation {
+  color: rgb(224, 28, 28);
+  font-size: larger;
+}
+.neighbor {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: larger;
+  color: brown;
+}
+.validator {
+  width: 8%;
+  float: left;
+}
