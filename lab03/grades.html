@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grades</title>
+  <link rel="stylesheet" href="./css/grade.css">
+</head>
+
+<body>
+  <div id="container">
+    <div>
+      <h1>Retrieve your grade</h1>
+    </div>
+    <div id="grade-form">      
+      <form action="http://mumstudents.org/params.php">
+        <div>
+          <label for="sId">Student Id: </label><br>
+          <input type="text" name="sId" id="sId" value="">
+        </div>        
+        <div>
+          <label for="lname">Last Name:</label><br>
+          <input type="text" name="lname"  id="lname" value="">
+        </div> 
+        <div>
+          <label for="fname">First Name:</label><br>
+          <input type="text" name="fname" id="fname" value="">
+        </div>
+        <div class="assignment">
+          <label for="assignment">Choose an Assignment:</label><br>
+          
+          <select name="assignment" id="assignment">
+            <option value="Lab01">Lab01 - Home Page</option>
+            <option value="Lab02">Lab02 - About me</option>
+            <option value="Homework01">Homework01 - Recipes</option>
+            <option value="Homework02">Homework02 - Movie Review</option>
+            <option value="Lab03">Lab03 - Grades Exercise</option>
+            <option value="Lab04">Lab04 - HTML Forms</option>
+          </select>
+        </div>
+
+        <div class="entry">
+          <p>Entry Period: </p>
+          <input type="radio" id="oct2021" name="entry" value="Oct 2021">
+          <label for="oct2021"> Oct 2021</label><br>
+          <input type="radio" id="aug2021" name="entry" value="Aug 2021">
+          <label for="aug2021"> Aug 2021</label><br>
+          <input type="radio" id="may2021" name="entry" value="May 2021">
+          <label for="may2021"> May 2021</label><br>
+          <input type="radio" id="feb2021" name="entry" value="Feb 2021">
+          <label for="feb2021"> Feb 2021</label><br>
+          <input type="radio" id="oct2020" name="entry" value="Oct 2020">
+          <label for="oct2020"> Oct 2020</label><br>
+        </div>
+        
+        <div>
+          <input type="checkbox" id="validation" name="validation" value="Agree">
+          <label for="validation">I confirm that the information provided in this form is correct.
+          </label> <br>
+        </div>
+        <div>
+          <input type="submit" name="submit" value="Get Grade!">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

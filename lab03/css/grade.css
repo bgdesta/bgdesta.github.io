@@ -1,0 +1,28 @@
+body {
+  font-family: "Lucida Sans", sans-serif;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+div {
+  margin: 15px 0;
+}
+#grade-form {
+  margin: 0 auto;
+  padding: 10px 0;
+  display: block;
+  text-align: center;
+  width: 400px;
+  background-color: rgb(235, 230, 230);
+}
+.assignment {
+  border: 1px solid grey;
+  margin: auto 80px;
+  padding: 10px;
+}
+.entry {
+  border: 1px solid grey;
+  margin: 20px 80px;
+}

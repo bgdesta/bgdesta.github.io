@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NerdLuv</title>
+  <link rel="stylesheet" href="./css/nerd.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <img class="head-img" src="./img/logo.png" alt=" logo">
+    </header>
+    
+    <form action="http://mumstudents.org/params.php">
+      <fieldset class="fieldset-connt">
+        <legend>New User SignUp: </legend>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" size="16"><br>
+        <label for="Gender">Gender:</label>
+        <label for="female" id="female">Female</label>
+        <input type="radio" name="Gender" id="gender" value="female">
+        <label for="male">Male</label>
+        <input type="radio" name="Gender" value="male"><br>
+        <label for="age">Age:</label>
+        <input type="text" name="age" id="age" size="6"> <br>
+        <label for="personality"> Personality type:</label>
+        <input type="text" name="personality" size="6">
+        <text>(<span class="text-color">Dont know your type?</span>)</text> <br>
+      
+        <label for="favoriteOs">Favorite OS:</label>
+        <select name="favoriteOs">
+          <option value="window">Microsoft Windows</option>          
+          <option value="linux">Linux</option>
+          <option value="mac">Mac</option>
+        </select>
+        <br>
+      
+        <label for="seekingage">Seeking age:</label>
+        <input type="text" name="min" placeholder="min" size="6" maxlength="2" pattern="\d{2}">
+        <text>to</text>
+        <input type="text" name="max" placeholder="max" size="6" maxlength="2" pattern="\d{2}"> <br><br>
+      
+        <button>Sign Up</button>
+      </fieldset>
+    </form>    
+    
+    <div class="footer-part">
+      <p>This page is for dingle nerds to meet and date each other!
+        Type in your personal information and wait for the nerdly luv to begin!
+        Thank you for using our site.
+      </p>
+      <p>result and page (C) Copyright NerdLuv Inc.</p>
+      <a href="../index.html"><img src="./img/back.jpg" alt="back icon" id="back-btn"><text class="text-color">Back to front
+          page</text></a>
+    
+      <br><br>
+    
+      <div class="validation-icon">
+        <a href="http://validator.w3.org/check?uri=https://bgdesta.github.io/lab04/nerdluv.html"> <img
+            src="../images/w3c-html.png" alt="HTML Validator" /></a>
+      </div>
+      <div class="validation-icon">
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://bgdesta.github.io/css/lab04/css/nerd.css"> <img
+            src="../images/w3c-css.png" alt="CSS Validator" /></a>
+      </div>
+    </div>
+  </div>
+   
+</body>
+</html>
