@@ -11,15 +11,14 @@ fieldset {
   width: fit-content;
   padding: 16px;
   margin: 20px 10px;
+  -moz-margin: 20px 10px;
 }
 legend {
   border: 1px solid black;
   background-color: #f5f1f0;
-  /* box-shadow: grey; */
 }
 .fieldset-connt {
   margin: auto;
-  box-shadow: slategray 3px;
 }
 .head-img {
   margin: 10px 560px;
