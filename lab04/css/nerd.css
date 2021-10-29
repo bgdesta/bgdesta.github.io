@@ -1,5 +1,8 @@
 body {
   margin: auto;
+  background-image: url("../img/onlinedating.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 #container {
   margin: 10px;
@@ -66,4 +69,6 @@ select {
 }
 .footer-part {
   margin: 35px 446px;
+  color: whitesmoke;
+  font-family: Verdana, sans-serif;
 }
