@@ -29,7 +29,7 @@ label {
   margin: 10px;
   font-weight: bold;
 }
-label#female {
+label.female {
   margin-left: 58px;
 }
 input {

@@ -18,18 +18,18 @@
         <legend>New User SignUp: </legend>
         <label for="name">Name: </label>
         <input type="text" name="name" id="name" size="16"><br>
-        <label for="Gender">Gender:</label>
-        <label for="female" id="female">Female</label>
-        <input type="radio" name="Gender" id="gender" value="female">
+        <label >Gender:</label>
+        <label for="female" class="female">Female</label>
+        <input type="radio" name="Gender" id="female" value="female">
         <label for="male">Male</label>
-        <input type="radio" name="Gender" value="male"><br>
+        <input type="radio" name="Gender" id="male" value="male"><br>
         <label for="age">Age:</label>
         <input type="text" name="age" id="age" size="6"> <br>
         <label for="personality"> Personality type:</label>
-        <input type="text" name="personality" size="6">
-        <text>(<span class="text-color">Dont know your type?</span>)</text> <br>
+        <input type="text" name="personality" id="personality" size="6">
+        <span class="text-color">(Dont know your type?)</span><br>
       
-        <label for="favoriteOs">Favorite OS:</label>
+        <label>Favorite OS:</label>
         <select name="favoriteOs">
           <option value="window">Microsoft Windows</option>          
           <option value="linux">Linux</option>
@@ -37,9 +37,9 @@
         </select>
         <br>
       
-        <label for="seekingage">Seeking age:</label>
+        <label>Seeking age:</label>
         <input type="text" name="min" placeholder="min" size="6" maxlength="2" pattern="\d{2}">
-        <text>to</text>
+        <span>to</span>
         <input type="text" name="max" placeholder="max" size="6" maxlength="2" pattern="\d{2}"> <br><br>
       
         <button>Sign Up</button>
@@ -52,8 +52,8 @@
         Thank you for using our site.
       </p>
       <p>result and page (C) Copyright NerdLuv Inc.</p>
-      <a href="../index.html"><img src="./img/back.jpg" alt="back icon" id="back-btn"><text class="text-color">Back to front
-          page</text></a>
+      <a href="../index.html"><img src="./img/back.jpg" alt="back icon" id="back-btn"><span class="text-color">Back to front
+          page</span></a>
     
       <br><br>
     
@@ -62,7 +62,7 @@
             src="../images/w3c-html.png" alt="HTML Validator" /></a>
       </div>
       <div class="validation-icon">
-        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://bgdesta.github.io/css/lab04/css/nerd.css" target="_blank"> <img
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://bgdesta.github.io/lab04/css/nerd.css" target="_blank"> <img
             src="../images/w3c-css.png" alt="CSS Validator" /></a>
       </div>
     </div>
