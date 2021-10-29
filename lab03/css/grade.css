@@ -7,7 +7,7 @@ h1 {
   text-align: center;
 }
 div {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 #grade-form {
   margin: 0 auto;
@@ -25,4 +25,11 @@ div {
 .entry {
   border: 1px solid grey;
   margin: 20px 80px;
+}
+#isValid {
+  display: block;
+  text-align: center;
+}
+.validation {
+  display: inline-block;
 }
