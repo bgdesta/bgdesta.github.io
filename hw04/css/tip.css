@@ -11,3 +11,6 @@ button {
 div {
   margin: 0.5em;
 }
+.validator {
+  display: inline;
+}

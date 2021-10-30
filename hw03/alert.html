@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta author="Berhanu Desta">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Alert Page</title>
   <style>
     body {
@@ -14,25 +13,32 @@
     }
     button {
       padding: 10px;
-      margin-top: 40px;
-      font-family: "Century Gothic", sans-serif;;
+      margin-top: 60px;
+      font-family: "Century Gothic", sans-serif;
       font-size: 20px; 
     } 
     .container {
       margin: auto;
       display: block;
       text-align: center;
+    } 
+    .alert {
+      margin-bottom: 20px;
     }
-    
+     
   </style>
 </head>
-<body>
-  <header></header>
-  <section>
+<body> 
     <div class="container">
-      <button onclick="displayAlert();">Click Me!</button>
-    </div>
-  </section>
+      <div class="alert">
+        <button onclick="displayAlert();">Click Me!</button>
+      </div>
+      <div class=" validator">
+        <a href="http://validator.w3.org/check?uri=https://bgdesta.github.io/hw03/alert.html"> <img
+            src="../images/w3c-html.png" alt="html validator" /></a>
+      </div>
+    </div> 
+ 
   <footer></footer>
 
   <script type="text/javascript">
