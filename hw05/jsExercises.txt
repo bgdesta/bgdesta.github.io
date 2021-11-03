@@ -33,7 +33,9 @@ let booyah1 = function(){
 };
 
 let booyah2 = function(){
-  setTimeout(booyah1, 2000);
+  return function(){
+    alert("BOOYAH");
+  } 
 };  
 
 Q4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons
