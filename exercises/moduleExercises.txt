@@ -21,7 +21,7 @@ Q1. Determine what this Javascript code will print out (without running it):
 
 ANSWER
 ========
-  10    8   8   9   10    1
+  undefined    8   8   9   10    1
 
 Q2. Define Global Scope and Local Scope in Javascript.
 
