@@ -135,12 +135,13 @@ function make_adder(inc) {
 
       return counter;
     }
+    
 }
 
 add5 = make_adder(5);
-add5( ); add5( ); add5( ); // final counter value is 15
+add5( ); add5( ); add5( ); 
 add7 = make_adder(7);
-add7( ); add7( ); add7( ); // final counter value is 21
+add7( ); add7( ); add7( ); 
 
 Q9.  Suppose you are given a file of Javascript code containing a list of many function and variable declarations. All of
 these function and variable names will be added to the Global Javascript namespace. What simple modification to

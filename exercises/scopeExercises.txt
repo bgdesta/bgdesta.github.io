@@ -29,7 +29,7 @@ ANSWER
 ======
 A function  is a block of code written to perform some specific set of tasks. A function is defined using
 the 'function' keyword as well as using other constructs like the arrow function.
-A method. in JavaScript, is a property of a  an Object that contains a function definition as its value.
+A method, in JavaScript, is a property of a  an Object that contains a function definition as its value.
 
 Q3. What does 'this' refer to when used in a Java method?
 
@@ -110,7 +110,7 @@ function product(){
 
 console.log(product(2, 4, -2, 500));
 
-Q11. Write an arrow function that returns the maximum of its three input arguments.
+Q11. Write an arrow function that returns the minimum of its three input arguments.
 
 ANSWER
 ======
