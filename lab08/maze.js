@@ -26,8 +26,12 @@ function endGame() {
   if (win && gameStarted) {
     $("#status").css("color", "green");
   } else {
-    $("#status").text('Click the "S" to begin.');
-    $("#status").css("color", "black");
+    $("#status").text(winStatus);
+    $("#status").css("color", "red");
+    setTimeout(function () {
+      $("#status").text('Click the "S" to begin.');
+      $("#status").css("color", "black");
+    }, 1000);
   }
   $("#maze .boundary").off();
 }
