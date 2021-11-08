@@ -42,4 +42,4 @@ Q3. Use a jQuery method to insert the text "YES!" at the end of the <p> element.
 
 ANSWER
 ======
-$("p").append(" YES!");
+$("p").append($("<span> YES!</span>"));
