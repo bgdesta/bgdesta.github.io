@@ -28,7 +28,7 @@ button {
 }
 
 #puzzlearea .squarePiece {
-  background-image: url("./img/background.jpg");
+  background-image: url("../img/background.jpg");
   width: 90px;
   height: 90px;
   border: 5px solid black;
