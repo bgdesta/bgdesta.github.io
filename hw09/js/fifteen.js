@@ -1,39 +1,38 @@
 const WIDTH = 100;
 const HEIGHT = 100;
-let col = 3;
-let row = 3;
+let rowVal = 3;
+let colVal = 3;
 
 let init = function () {
-  let divs = $("#puzzlearea > div");
+  $("#puzzlearea > div").each(function (index) {
+    // Calculate x and y for each square piece
+    let x = (index % 4) * 100;
+    let y = Math.floor(index / 4) * 100;
 
-  // initialize each square piece
-  for (var i = 0; i < divs.length; i++) {
-    var div = divs[i];
-
-    // calculate x and y for each square piece
-    var x = (i % 4) * 100;
-    var y = Math.floor(i / 4) * 100;
-
-    // set basic style and background
-    div.className = "squarePiece";
-    div.style.left = x + "px";
-    div.style.top = y + "px";
-    div.style.backgroundPosition = -x + "px " + -y + "px";
+    //Set Basic style and background
+    $(this).addClass("squarePiece");
+    $(this).attr("id", x + "_" + y);
+    $(this).css({
+      left: x + "px",
+      top: y + "px",
+      // "background-image": 'url("background.jpg")',
+      "background-position": -x + "px " + -y + "px",
+    });
 
     // store x and y for later
-    div.x = x;
-    div.y = y;
-  }
+    this.x = x;
+    this.y = y;
+  });
 };
 
-// Check if square piece is movable
-let isMovable = function (tile) {
-  let freeTileXpos = row * WIDTH;
-  let freeTileYpos = col * HEIGHT;
+//Check if square piece is movable
+let isMovable = function ($tile) {
+  console.log($tile.position());
+  let freeTileXpos = rowVal * WIDTH;
+  let freeTileYpos = colVal * HEIGHT;
 
-  let clickedTilePosition = tile.position();
-  let x = clickedTilePosition.left;
-  let y = clickedTilePosition.top;
+  let x = $tile.position().left;
+  let y = $tile.position().top;
 
   // movable position left right top bottom
   let leftTilePos = x + 100;
@@ -63,86 +62,56 @@ let isMovable = function (tile) {
 };
 
 // move squarePiece (tile)
-function movePiece(tile) {
-  let curTile = tile.position();
-  let x = curTile.left;
-  let y = curTile.top;
+function movePiece($tile) {
+  let x = $tile.position().left;
+  let y = $tile.position().top;
 
   let tempX = x / 100;
   let tempY = y / 100;
 
-  tile.css({
-    top: col * HEIGHT,
-    left: row * WIDTH,
+  $tile.css({
+    top: colVal * HEIGHT,
+    left: rowVal * WIDTH,
   });
 
-  row = tempX;
-  col = tempY;
-}
+  rowVal = tempX;
+  colVal = tempY;
 
-// Shuffle tiles
-function shuffle() {
-  init();
-
-  let originalUnshuffledArray = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-  ];
-  let shuffledArray = shuffleArray(originalUnshuffledArray);
-
-  $("#puzzlearea > div").each(function (idx) {
-    let newIdx = shuffledArray[idx];
-    var xPos = function (num) {
-      return (num % 4) * 100;
-    };
-    var yPos = function (num) {
-      return Math.floor(num / 4) * 100;
-    };
-    var x = xPos(newIdx);
-    var y = yPos(newIdx);
-    var origX = xPos(idx);
-    var origY = yPos(idx);
-    $(this).addClass("squarePiece");
-    $(this).css({
-      left: x + "px",
-      top: y + "px",
-      // "background-image": "url(../img/background.jpg)",
-      "background-position": -origX + "px" + -origY + "px",
-    });
-    $(this).x = x;
-    $(this).y = y;
+  //check whether you won the puzzel or not
+  let col = 0;
+  let row = 0;
+  $(".puzzlepiece").each(function () {
+    if ($(this).attr("id") === row * 100 + "_" + col * 100) {
+      row++;
+      if (row === 4) {
+        row = 0;
+        col++;
+      }
+    }
   });
-  randomizeEmptyArea(shuffledArray);
-}
-
-var shuffleArray = function (arr) {
-  let numElements = arr.length;
-  let numTimesToShuffle = numElements;
-
-  while (numTimesToShuffle != 0) {
-    let randIdx1 = Math.floor(Math.random() * numElements);
-    let randIdx2 = Math.floor(Math.random() * numElements);
-    let tmp = arr[randIdx1];
-    arr[randIdx1] = arr[randIdx2];
-    arr[randIdx2] = tmp;
-    numTimesToShuffle -= 1;
+  if (row === 3 && col === 3) {
+    let confirmation = confirm(
+      "Congratulations, You won the Game! \n Press ok to continue ..."
+    );
+    if (confirmation === true) {
+      shuffle();
+    }
   }
-  return arr;
-};
+}
 
-var randomizeEmptyArea = function (arr) {
-  let numElements = arr.length;
-  let randDivIdx = Math.floor(Math.random() * numElements);
-  var randDiv = $("#puzzlearea > div")[randDivIdx];
-
-  let randDivX = $(randDiv).position().left;
-  let randDivY = $(randDiv).position().top;
-  $(randDiv).css({
-    top: col * HEIGHT,
-    left: row * WIDTH,
-  });
-  row = randDivX / 100;
-  col = randDivY / 100;
-};
+// Shuffle square pieces to start playing the game
+function shuffle() {
+  for (var i = 0; i < 100; i++) {
+    let row = Math.floor(Math.random() * 4);
+    let col = Math.floor(Math.random() * 4);
+    if (row !== rowVal || col !== colVal) {
+      let $selectedSqr = $("#" + row * 100 + "_" + col * 100);
+      if ($selectedSqr.length !== 0 && isMovable($selectedSqr)) {
+        $selectedSqr.triggerHandler("click");
+      }
+    }
+  }
+}
 
 // Check if page has fully loaded
 $(document).ready(function () {

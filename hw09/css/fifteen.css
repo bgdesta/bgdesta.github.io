@@ -1,0 +1,57 @@
+body,
+button {
+  font-family: cursive;
+  font-size: 14pt;
+  text-align: center;
+}
+.container {
+  margin: auto;
+  width: 90%;
+  overflow: hidden;
+}
+#w3c {
+  margin: auto;
+  width: 300px;
+}
+.validator {
+  float: left;
+  margin-right: 10px;
+}
+/* The area that holds the 15 puzzle pieces. */
+#puzzlearea {
+  font-size: 40pt;
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#puzzlearea .squarePiece {
+  background-image: url("./img/background.jpg");
+  width: 90px;
+  height: 90px;
+  border: 5px solid black;
+  position: absolute;
+}
+/* This class should be applied to a puzzle piece that can be moved. */
+.movablepiece:hover {
+  border-color: red;
+  color: red;
+}
+
+/* grading styles -- for TAs only; not required by students */
+#gradingarea {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 999999;
+}
+
+.valid {
+  background-color: #bfb;
+}
+
+.invalid {
+  background-color: #f88;
+}
