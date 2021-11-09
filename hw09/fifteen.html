@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)http://mumstudents.org/cs472/2021-11-BL/Homework/9puzzle/resources/fifteen.html -->
+<html><!--
+	CSE 190 M, Homework 7: Fifteen Puzzle
+	You should not modify fifteen.html.  Your JS code should work with an
+	unmodified version of this file.
+	-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Fifteen Puzzle</title>
+
+		<!-- instructor-provided JavaScript files; do not modify -->
+		<!-- <script src="./fifteen_files/prototype.js.download" type="text/javascript"></script>
+		<script src="./fifteen_files/grading.js.download" type="text/javascript"></script> -->
+
+		<!-- your files that you will write -->
+		<link href="./fifteen.css" type="text/css" rel="stylesheet"> 
+		<!-- <script src="./fifteen_files/fifteen.js.download" type="text/javascript"></script> -->		
+		<script src="../jquery/jquery-3.6.0.min.js"></script>
+		<script src="./js/fifteen.js"></script>
+	</head>
+
+	<body>
+		<h1>CSE 190 M Fifteen Puzzle</h1>
+		
+		<p>
+			The goal of the fifteen puzzle is to un-jumble its fifteen squares
+			by repeatedly making moves that slide squares into the empty space.
+			How quickly can you solve it?
+		</p>
+		
+		<div id="puzzlearea">
+			<!-- the following are the actual fifteen puzzle pieces -->
+			<div id="sq01" class="squarePiece">1</div>
+			<div id="sq02" class="squarePiece">2</div>
+			<div id="sq03" class="squarePiece">3</div>
+			<div id="sq04" class="squarePiece">4</div>
+			<div id="sq05" class="squarePiece">5</div>
+			<div id="sq06" class="squarePiece">6</div>
+			<div id="sq07" class="squarePiece">7</div>
+			<div id="sq08" class="squarePiece">8</div>
+			<div id="sq09" class="squarePiece">9</div>
+			<div id="sq10" class="squarePiece">10</div>
+			<div id="sq11" class="squarePiece">11</div>
+			<div id="sq12" class="squarePiece">12</div>
+			<div id="sq13" class="squarePiece">13</div>
+			<div id="sq14" class="squarePiece">14</div>
+			<div id="sq15" class="squarePiece">15</div>
+		</div>
+		
+		<p id="controls">
+			<button id="shufflebutton">Shuffle</button>
+		</p>
+		
+		<p>
+			American puzzle author and mathematician Sam Loyd is often falsely
+			credited with creating the puzzle; indeed, Loyd claimed from 1891
+			until his death in 1911 that he invented it.
+			The puzzle was actually created around 1874 by Noyes Palmer Chapman,
+			a postmaster in Canastota, New York.
+		</p>
+		
+		<div id="w3c">
+			<div class="validator">
+				<a href="http://validator.w3.org/check?uri=https://bgdesta.github.io/hw09/fifteen.html"> <img
+						src="../images/w3c-html.png" alt="HTML validator" /></a>
+			</div>
+			<div class="validator">
+				<a href="https://jigsaw.w3.org/css-validator/validator?uri=https://bgdesta.github.io/hw09/fifteen.css"
+					target="_blank">
+					<img src="../images/w3c-css.png" alt="CSS validator" /></a>
+			</div>
+			<div class="validator">
+				<a href="https://www.jslint.com/?referer=https://bgdesta.github.io/hw09/fifteen.js"
+					target="_blank">
+					<img src="../images/jscheck.png" alt="JS validator" /></a>
+			</div>
+		</div>
+	</body>
+</html>
