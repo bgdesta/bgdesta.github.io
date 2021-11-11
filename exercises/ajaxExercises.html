@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX Exercises</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="users">
+  </div>
+  <div id="posts"></div>
+</body>
+<script> 
+  $(document).ready(function(){
+    let base_url = "https://jsonplaceholder.typicode.com";
+
+    $.ajax(base_url + "/users", {
+      type: "GET",
+      async: true
+    }).done(function(data){
+      $("#users").html("<p>List of Users: </p><ol></ol>");
+      console.log(data);
+      let $userList = $("#users").children("ol");
+      for (let i = 0; i < data.length; i++){
+        let $user = $("<li>" + data[i].name + "</li>");
+        $user.appendTo($userList);
+      }
+    });
+
+    $.ajax(`${base_url}/posts`, {
+      type: "GET",
+      data: {
+        "userId": 1
+      },
+      async: true
+    }).done(function(data){
+      console.log(data);
+      $posts = $('<div id="userposts"><h2>User Posts</h2><div></div></div>');
+      $("body").append($posts);
+      for(let i = 0; i < data.length; i++){
+        let $title = $("<dt><strong>" + data[i].title + "</strong></dt>");
+        let $post = $("<div><dd>" + data[i].body + "</dd></br></div>");
+        $title.appendTo($("#userposts > div"));
+        $post.appendTo($("#userposts > div"));
+      }
+    })
+  });
+</script>
+</html>
