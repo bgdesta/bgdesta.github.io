@@ -1,0 +1,41 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title The Number Quiz
+  style.
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    }
+    .container {
+    width: 400px;
+    border: 1px blue solid;
+    margin: auto;
+    padding: 20px;
+    margin-top: 30px;
+    }
+    button {
+    height: 30px;
+    font-size: 18px;
+    }
+    h1 {
+    text-align: center;
+    }
+h1 The Number Quiz
+.container
+  p Your current score is #{score}.
+  p Guess the next number in the sequence.
+  p #{question}
+  div
+    form(action='http://localhost:3000/quiz' method='post')
+      label(for='answer') Your Answer: 
+      input#answer(type='text' name='answer' size='6')
+      br
+      br 
+      label(hidden name='quizNum') #{quizNum}
+      br
+      label(hidden name='score') #{score} 
+      div
+        button(type='submit') Submit

@@ -41,9 +41,9 @@
       $("body").append($posts);
       for(let i = 0; i < data.length; i++){
         let $title = $("<dt><strong>" + data[i].title + "</strong></dt>");
-        let $post = $("<div><dd>" + data[i].body + "</dd></br></div>");
+        let post = $("<div><dd>" + data[i].body + "</dd></br></div>");
         $title.appendTo($("#userposts > div"));
-        $post.appendTo($("#userposts > div"));
+        post.appendTo($("#userposts > div"));
       }
     })
   });

@@ -57,8 +57,9 @@
       $("ol a").each(function(i, elem){
         $(elem).attr("href", "#");
         $(this).attr("target", "_blank");
-        console.log(i);
+        
       })
+      console.log($("ol a:first").attr("*"));
     });
   </script>
 </body>
