@@ -6,7 +6,7 @@ ANSWER
 ======
 The jQuery() function, or $() for short, is a function that takes CSS-style DOM selectors as an argument, and 
 outputs a JQuery object. A JQuery Object is a collection of properties represented by key-value pairs. Apart from 
-$(), JQuery has many buildin methods available for use.
+$(), JQuery has many builtin methods available for use.
 
 Q2. Write jQuery code to find all h1 elements that are children of a div element and make their background
 color red.

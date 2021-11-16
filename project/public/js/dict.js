@@ -9,7 +9,21 @@ $(document).ready(function () {
       dataType: "json",
       data: searchItem,
       success: function (result) {
-        $("#definition > ol").html("");
+        $("#definition").html("");
+        if (result.length === 0) {
+          let notFound = $(
+            "<div><p>Sorry, the term you searched for was not found in our Dictionary!</p></div>"
+          );
+          notFound.css({
+            color: "red",
+            "font-family": " monospace",
+            "font-size": "16px",
+            "margin-top": "15px",
+          });
+          // $("#definition > div").remove();
+          $("#definition").prepend(notFound);
+        }
+        $("#definition").append($("<ol></ol>"));
         for (let i = 0; i < result.length; i++) {
           let defn = $(
             "<li>(" +
