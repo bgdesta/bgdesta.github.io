@@ -7,8 +7,6 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static("./public"));
-
 app.get("/calculate.js", (req, res) => {
   let operation = req.query.calculate;
   let num1 = parseFloat(req.query.num1);

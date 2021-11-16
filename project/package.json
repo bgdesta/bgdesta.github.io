@@ -1,0 +1,17 @@
+{
+  "name": "wap-online-dictionary",
+  "version": "1.0.0",
+  "description": "WAP Online Dictionary",
+  "main": "dictionary.js",
+  "scripts": {
+    "start": "nodemon ./dictionary.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Berhanu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.9.0"
+  }
+}

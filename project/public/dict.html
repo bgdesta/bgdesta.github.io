@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS472 Online Dictionary</title> 
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/dict.js"></script>
+  <link rel="stylesheet" href="./css/dict.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img id="header-img" src="./images/miu-logo-horizontal-1024x317.png" alt="">      
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>CS472 Online Dictionary</h1>
+    <div id="lookup">
+      <form action="">
+        <label for="search">Term: </label>
+        <input type="search" name="word" id="search" minlength="1" placeholder="Search a word" required />  
+        <input type="submit" id="lookup" value="Lookup">     
+      </form> 
+    </div>
+    <div id="definition">
+      <ol></ol>
+    </div>
+  </div>
+  <footer id="footer">
+    <div class="container">
+      <div>
+        Copyright © 2021 Online Dictionary. All Rights Reserved
+      </div>
+      <div>
+        Maharishi International University
+      </div> 
+      <div><span>Email: </span><a href="mailto:bgdesta@miu.edu">bgdesta@miu.edu </a></div>
+    </div>
+  </footer>
+</body>
+</html>
