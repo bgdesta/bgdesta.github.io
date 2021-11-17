@@ -22,17 +22,18 @@ $(document).ready(function () {
           });
           // $("#definition > div").remove();
           $("#definition").prepend(notFound);
-        }
-        $("#definition").append($("<ol></ol>"));
-        for (let i = 0; i < result.length; i++) {
-          let defn = $(
-            "<li>(" +
-              result[i].wordtype +
-              ") :: " +
-              result[i].definition +
-              "</li>"
-          );
-          defn.appendTo($("#definition > ol"));
+        } else {
+          $("#definition").append($("<ol></ol>"));
+          for (let i = 0; i < result.length; i++) {
+            let defn = $(
+              "<li>(" +
+                result[i].wordtype +
+                ") :: " +
+                result[i].definition +
+                "</li>"
+            );
+            defn.appendTo($("#definition > ol"));
+          }
         }
       },
       error: function (err) {
