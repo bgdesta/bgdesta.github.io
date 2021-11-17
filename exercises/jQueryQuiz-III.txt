@@ -29,8 +29,8 @@ show it is just text (the red bold is gone).
 
 SOLUTION
 ========
-let $textVal =  $("p").first().text();
-$("p").last().html($textVal);
+let textVal =  $("p").first().text();
+$("p").last().html(textVal);
 
 Q2. Write jQuery code to create a red background for the level-2 list items.
       <ul class="level-1">
@@ -72,9 +72,7 @@ SOLUTION
 There are many ways of doing it. Below are some of the ways:
 $(".third-item").prev().css({"background-color": "blue"});
 
-$("ul").find(".third-item").before().css({"background-color": "blue"}); 
-
-$("ul > .third-item").before().css({"background-color": "blue"}); 
+$("ul").find(".third-item").before().css({"background-color": "blue"});  
 
 $("ul").children().eq(1).css({"background-color": "blue"});     // If the given list is the only list in a page
 
