@@ -8,7 +8,8 @@ $(document).ready(function () {
       type: "POST",
       dataType: "json",
       data: searchItem,
-      success: function (result) {
+    })
+      .done(function (result) {
         $("#definition").html("");
         if (result.length === 0) {
           let notFound = $(
@@ -35,11 +36,10 @@ $(document).ready(function () {
             defn.appendTo($("#definition > ol"));
           }
         }
-      },
-      error: function (err) {
+      })
+      .fail((err) => {
         console.log(err);
-      },
-    });
+      });
 
     event.preventDefault();
   });
